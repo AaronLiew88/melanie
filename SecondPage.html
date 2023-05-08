@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To bao <3</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+	<body>
+  <div class="container">
+    
+    <br>
+    <form>
+      <label for="code">Enter the last 6 digits of my IC:</label>
+      <br>
+      <input type="text" id="code" name="code" required>
+      <button type="submit" class="button-1">Submit</button>
+    </form>
+  </div>
+  
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const codeInput = document.querySelector('#code');
+      if (codeInput.value === '141093') {
+        window.location.href = 'ConfessionPage.html';
+      } else {
+        alert('Incorrect code. Please try again.');
+      }
+    });
+  </script>
+</body>
